@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة المستشفيات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="شعار الموقع">
+        <h1>صحتي</h1>
+    </header>
+
+    <!-- شريط البحث -->
+    <section id="search" style="display: block;">
+        <input type="text" placeholder="ابحث عن مستشفى أو منطقة جغرافية...">
+        <button onclick="searchHospital()">بحث</button>
+    </section>
+
+    <!-- نتائج البحث -->
+    <section id="results">
+        <div class="hospital-card" data-name="مشفى الباب" data-location="الباب">
+            <img src="hospital1.jpg" alt="مشفى الباب">
+            <h2>مشفى الباب</h2>
+            <button onclick="viewDetails(this)">عرض التفاصيل</button>
+            <button onclick="makeReservation()">حجز</button>
+            <button onclick="contactHospital()">للتواصل</button>
+        </div>
+
+        <div class="hospital-card" data-name="مشفى الفتح" data-location="الباب">
+            <img src="hospital2.jpg" alt="مشفى الفتح">
+            <h2>مشفى الفتح</h2>
+            <button onclick="viewDetails(this)">عرض التفاصيل</button>
+            <button onclick="contactHospital()">للتواصل</button>
+        </div>
+
+        <div class="hospital-card" data-name="مشفى الفارابي" data-location="الباب">
+            <img src="hospital3.jpg" alt="مشفى الفارابي">
+            <h2>مشفى الفارابي</h2>
+            <button onclick="viewDetails(this)">عرض التفاصيل</button>
+            <button onclick="contactHospital()">للتواصل</button>
+        </div>
+
+        <div class="hospital-card" data-name="مشفى الماجد" data-location="الباب">
+            <img src="hospital4.jpg" alt="مشفى الماجد">
+            <h2>مشفى الماجد</h2>
+            <button onclick="viewDetails(this)">عرض التفاصيل</button>
+            <button onclick="contactHospital()">للتواصل</button>
+        </div>
+    </section>
+
+
+    <section id="hospital-details" style="display: none;">
+        <img id="details-image" src="" alt="صورة المستشفى" style="width: 100%;">
+        <h2 id="details-name">اسم المستشفى</h2>
+        <p id="details-location">الموقع: </p>
+        <p id="details-hours">ساعات العمل: </p>
+        <p id="details-services">الخدمات المتاحة: </p>
+        <h3>الأطباء المتخصصون:</h3>
+        <ul id="details-doctors">
+         
+        </ul>
+        <button onclick="closeDetails()">إغلاق</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
