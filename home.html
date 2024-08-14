@@ -39,11 +39,19 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fas fa-envelope"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-whatsapp" onclick="openWhatsApp()"></i></a>
         </div>
         <div class="footer-copyright">
             <p>Copyright © by sara alesa , shaymaa almohammad.</p>
         </div>
-
+        <script>
+          function openWhatsApp() {
+              var phonenumber = "+306999053192"; 
+              var url = "https://wa.me/" + phonenumber;
+              window.open(url, '_blank').focus();
+          }
+      </script>
+      
       </footer>
     </div>
   </body>
