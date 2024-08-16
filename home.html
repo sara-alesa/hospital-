@@ -1,58 +1,48 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>صحتي</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <div class="contener">
-        <nav class="nav">
-            <div class="container">
-                <h1 class="logo"><a href="#"> صحتي</a></h1>
-                <ul>
-                    <li><a href="index.html">البحث عن مشفى</a></li>
-                    <li><a href="#">تواصل معنا </a></li>
-                    <li><a href="">تفاصيل الموقع</a></li>
-                </ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>صحتي</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="open">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </nav>
-      <div class="img">
-        <div class="text">
-          <h1>صحتي</h1>
-          <h3>this is my web site ,you can show All the hospitals in your city and know daitels</h3>
         </div>
-      </div>
-      <footer class="footer">
-        <h1>صحتي</h1>
-        <div class="footer-content">
-          <a href="#">من نحن</a>
-          <a href="#">اهداف الموقع</a>
-          <a href="#">....</a>
-          <a href="#">....</a>
+        <div class="content">
+            <h1>ابحث  الآن عن المشفى التي تناسب احتياجاتك </h1>
+            <small>نبذة عن الموقع </small>
+            <p>يوفر خدمة بحث سريع وسهل لاستكشاف المستشفيات الموجودة في المنطقة وتزويد المستخدمين بالمعلومات المهمة عن المشافي 
+                واماكنها ومواعد كل عيادة تخصصية 
+            </p>
+            <h3></h3>
+            <img src="images/landscape.jpg" alt="mountian">
+            
         </div>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-         <a href="#"><i class="fab fa-whatsapp" onclick="openWhatsApp()"></i></a>
-        </div>
-        <div class="footer-copyright">
-            <p>Copyright © by sara alesa , shaymaa almohammad.</p>
-        </div>
-        <script>
-          function openWhatsApp() {
-              var phonenumber = "+306999053192"; 
-              var url = "https://wa.me/" + phonenumber;
-              window.open(url, '_blank').focus();
-          }
-      </script>
-      
-      </footer>
     </div>
-  </body>
-</html> 
+    <nav>
+        <ul>
+            <li><i class="fas fa-home"></i> <a href="">المشافي</a></li>
+            <li><i class="fas fa-user-alt"></i><a href="">من نحن</a> </li>
+            <li><i class="fas fa-envelope"></i><a href=""> تواصل معنا </a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
