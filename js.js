@@ -75,7 +75,6 @@ function showSearch() {
 function makeReservation() {
     alert('تم النقر على زر الحجز.');
 }
-
 function contactHospital() {
    let cards = document.querySelectorAll('.hospital-card');
 cards.forEach((card, index) => {
@@ -87,6 +86,33 @@ cards.forEach((card, index) => {
       
     });
 });
+
+
+
+ // let cards = document.querySelectorAll(".hospital-card");
+ //  cards.forEach((card, index) => {
+ //    let contactButton = card.querySelector('button[onclick="contactHospital()"]');
+ //    contactButton.addEventListener("click", () => {
+ //      let contactNumber = card.getAttribute("data-contact");
+ //      let whatsappUrl = `https://api.whatsapp.com/send?phone=${contactNumber}`;
+    
+    
+ //      fetch(whatsappUrl)
+ //        .then((response) => {
+ //          if (response.ok) {
+ //            window.location.href = whatsappUrl;
+ //          } else {
+ //            alert(" اخطأأأأأ ");
+ //          }
+ //        })
+ //        .catch((error) => {
+ //          console.error("Error:", error);
+ //          alert(
+ //            "لم يتم الاتصال"
+ //          );
+ //        });
+ //    });
+ //  }); 
 }
 
 
