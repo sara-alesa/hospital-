@@ -76,16 +76,17 @@ function makeReservation() {
     alert('تم النقر على زر الحجز.');
 }
 function contactHospital() {
-   let cards = document.querySelectorAll('.hospital-card');
+let cards = document.querySelectorAll('.hospital-card');
 cards.forEach((card, index) => {
     let contactButton = card.querySelector('button[onclick="contactHospital()"]');
-    contactButton.addEventListener('click', () => {    
+    contactButton.addEventListener('click', () => {
         let contactNumber = card.getAttribute('data-contact');
         let url="https://wa.me/"+contactNumber;
         window.open(url, '_blank').focus();
       
     });
 });
+}
 
 
 
@@ -113,7 +114,7 @@ cards.forEach((card, index) => {
  //        });
  //    });
  //  }); 
-}
+
 
 
 
