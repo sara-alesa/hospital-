@@ -77,7 +77,16 @@ function makeReservation() {
 }
 
 function contactHospital() {
-    alert('تم النقر على زر للتواصل.');
+   let cards = document.querySelectorAll('.hospital-card');
+cards.forEach((card, index) => {
+    let contactButton = card.querySelector('button[onclick="contactHospital()"]');
+    contactButton.addEventListener('click', () => {    
+        let contactNumber = card.getAttribute('data-contact');
+        let url="https://wa.me/"+contactNumber;
+        window.open(url, '_blank').focus();
+      
+    });
+});
 }
 
 
