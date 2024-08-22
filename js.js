@@ -126,3 +126,44 @@ var container = document.querySelector(".container");
 
 open.addEventListener("click", () => container.classList.add("show-nav"));
 close.addEventListener("click", () => container.classList.remove("show-nav"));
+
+//////////////// comments/////////////////
+function display_comment() {
+  document.getElementById("hospital-comment").style.display = "block";
+  
+}
+////////////////////////////////////////////////////////////////////////////////////////
+function send(button) {
+    
+  let codes = document.getElementById("codes");
+  let submit = document.getElementById("submit");
+  let show = document.getElementById("show");
+
+  localStorage.setItem("comment",codes.value)
+  if (codes.value != "") {
+    show.innerHTML +=
+      "<div id='comment'>" +
+      "<h4 id='h4'>" +
+      //codes.value +
+      localStorage.getItem("comment")
+     +
+      "<button onclick='delete_comment()'>delete</button>" 
+      +"<button onclick='edit_comment()'>edit</button>"
+      "</div>";
+    codes.value = "";
+  } else {
+    codes.style.border = "1px solid red";
+    alert("enter you comment");
+  }
+
+}
+function delete_comment(){
+  let element = document.getElementById('comment');
+  element.remove();
+}
+function cancel_comments(){
+  document.getElementById("hospital-comment").style.display = "none";
+}
+function edit_comment(){
+  alert("edit comment")
+}
