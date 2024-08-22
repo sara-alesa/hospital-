@@ -63,6 +63,17 @@
          
         </ul>
         <button onclick="closeDetails()">إغلاق</button>
+        <button onclick="display_comment(this)">التعليقات</button>
+
+      <section id="hospital-comment" style="display: none">
+        <div id="show"></div>
+        <h5>Write a comment</h5>
+        <div class="write-comment">
+          <textarea id="codes"></textarea><br />
+          <button id="submit" onclick="send(this)">Submit</button>
+          <button id="cancel" onclick="cancel_comments(this)">اغلاق</button>
+        </div>
+      </section>
     </section>
 
     <script src="js.js"></script>
