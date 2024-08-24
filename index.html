@@ -18,64 +18,70 @@
         <button onclick="searchHospital()">بحث</button>
     </section>
 
-    <section id="results">
-        <div class="hospital-card" data-name="مشفى الباب" data-location="الباب" data-contact="+905319477251">
-            <img src="hospital1.jpg" alt="مشفى الباب">
-            <h2>مشفى الباب</h2>
-            <button onclick="viewDetails(this)">عرض التفاصيل</button>
-            <button onclick="makeReservation()">
-           <a href="https://www.albabhos.net/index.php">للحجز</a>
-            </button>
-            <button onclick="contactHospital()">للتواصل</button>
-        </div>
+  <section id="results">
+      <div class="hospital-card" data-name="مشفى الباب" data-location="الباب" data-contact="+905319477251">
+          <img src="hospital1.jpg" alt="مشفى الباب">
+          <h2>مشفى الباب</h2>
+          <button onclick="viewDetails(this)">عرض التفاصيل</button>
+          <button onclick="makeReservation()">
+         <a href="https://www.albabhos.net/index.php">للحجز</a>
+          </button>
+          <button onclick="contactHospital()">للتواصل</button>
+          <button onclick="display_comment(this)">التعليقات</button>
+      </div>
 
-        <div class="hospital-card" data-name="مشفى الفتح" data-location="الباب" data-contact="+905012457774">
-            <img src="hospital2.jpg" alt="مشفى الفتح">
-            <h2>مشفى الفتح</h2>
-            <button onclick="viewDetails(this)">عرض التفاصيل</button>
-            <button onclick="contactHospital()">للتواصل</button>
-        </div>
+      <div class="hospital-card" data-name="مشفى الفتح" data-location="الباب" data-contact="+905012457774">
+          <img src="hospital2.jpg" alt="مشفى الفتح">
+          <h2>مشفى الفتح</h2>
+          <button onclick="viewDetails(this)">عرض التفاصيل</button>
+          <button onclick="contactHospital()">للتواصل</button>
+          <button onclick="display_comment(this)">التعليقات</button>
+      </div>
 
-        <div class="hospital-card" data-name="مشفى الفارابي" data-location="الباب" data-contact=>
-            <img src="hospital3.jpg" alt="مشفى الفارابي">
-            <h2>مشفى الفارابي</h2>
-            <button onclick="viewDetails(this)">عرض التفاصيل</button>
-            <button onclick="contactHospital()">للتواصل</button>
-        </div>
+      <div class="hospital-card" data-name="مشفى الفارابي" data-location="الباب" data-contact=>
+          <img src="hospital3.jpg" alt="مشفى الفارابي">
+          <h2>مشفى الفارابي</h2>
+          <button onclick="viewDetails(this)">عرض التفاصيل</button>
+          <button onclick="contactHospital()">للتواصل</button>
+          <button onclick="display_comment(this)">التعليقات</button>
+      </div>
 
-        <div class="hospital-card" data-name="مشفى الماجد" data-location="الباب" data-contact="+905541983129">
-            <img src="hospital4.jpg" alt="مشفى الماجد">
-            <h2>مشفى الماجد</h2>
-            <button onclick="viewDetails(this)">عرض التفاصيل</button>
-            <button onclick="contactHospital()">للتواصل</button>
-        </div>
-    </section>
+      <div class="hospital-card" data-name="مشفى الماجد" data-location="الباب" data-contact="+905541983129">
+          <img src="hospital4.jpg" alt="مشفى الماجد">
+          <h2>مشفى الماجد</h2>
+          <button onclick="viewDetails(this)">عرض التفاصيل</button>
+          <button onclick="contactHospital()">للتواصل</button>
+          <button onclick="display_comment(this)">التعليقات</button>
+      </div>
+  </section>
 
 
-    <section id="hospital-details" style="display: none;">
-        <img id="details-image" src="" alt="صورة المستشفى" style="width: 100%;">
-        <h2 id="details-name">اسم المستشفى</h2>
-        <p id="details-location">الموقع: </p>
-        <p id="details-hours">ساعات العمل: </p>
-        <p id="details-services">الخدمات المتاحة: </p>
-        <h3>الأطباء المتخصصون:</h3>
-        <ul id="details-doctors">
-         
-        </ul>
-        <button onclick="closeDetails()">إغلاق</button>
-        <button onclick="display_comment(this)">التعليقات</button>
+  <section id="hospital-details" style="display: none;">
+    <img id="details-image" src="" alt="صورة المستشفى" style="width: 100%;">
+    <h2 id="details-name">اسم المستشفى</h2>
+    <p id="details-location">الموقع: </p>
+    <p id="details-hours">ساعات العمل: </p>
+    <p id="details-services">الخدمات المتاحة: </p>
+    <h3>الأطباء المتخصصون:</h3>
+    <ul id="details-doctors">
+     
+    </ul>
+    <button onclick="closeDetails()">إغلاق</button>
 
-      <section id="hospital-comment" style="display: none">
-        <div id="show"></div>
-        <h5>Write a comment</h5>
-        <div class="write-comment">
-          <textarea id="codes"></textarea><br />
-          <button id="submit" onclick="send(this)">Submit</button>
-          <button id="cancel" onclick="cancel_comments(this)">اغلاق</button>
-        </div>
-      </section>
-    </section>
+</section>
 
-    <script src="js.js"></script>
-</body>
+    <!-- قسم التعليقات -->
+    <div id="hospital-comment" style="display: none;">
+      <h3>التعليقات على <span id="hospital-name"></span></h3>
+      <div id="comments-list">
+        <!-- سيتم إضافة التعليقات هنا -->
+      </div>
+      <textarea id="codes" placeholder="أضف تعليقك هنا"></textarea>
+      <button id="send-button" onclick="send()">إرسال</button>
+      <button onclick="close_comment()">إغلاق</button>
+    </div>
+  <button ><a href="home.html">home</a></button>
+<script src="js.js"></script>
+
+  </body>
 </html>
